@@ -48,7 +48,11 @@ try {
             $temp = @($data.hourly.temperature_2m | ForEach-Object { [double]$_ } | Measure-Object -Minimum -Maximum)
             $rain = @($data.hourly.precipitation_probability | ForEach-Object { [double]$_ } | Measure-Object -Maximum)
             $last = [Math]::Min(5, $data.hourly.time.Count - 1)
-            $text = [string]::Format([string]$cfg.weather_template, @([string]$data.hourly.time[0], [string]$data.hourly.time[$last], $temp[0].Minimum, $temp[0].Maximum, $rain[0].Maximum))
+            $format = 'yyyy-MM-ddTHH:mm'
+            $culture = [Globalization.CultureInfo]::InvariantCulture
+            $start = [DateTime]::ParseExact([string]$data.hourly.time[0], $format, $culture).ToString('yyyy-MM-dd HH:mm:ss', $culture)
+            $end = [DateTime]::ParseExact([string]$data.hourly.time[$last], $format, $culture).ToString('yyyy-MM-dd HH:mm:ss', $culture)
+            $text = [string]::Format([string]$cfg.weather_template, @($start, $end, $temp[0].Minimum, $temp[0].Maximum, $rain[0].Maximum))
             [PSCustomObject]@{ ok=$true; text=$text; source=$source; topic=$Topic }
             return
         }

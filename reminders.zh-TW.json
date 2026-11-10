@@ -1,0 +1,24 @@
+{
+  "water_minutes": 60,
+  "restroom_minutes": 120,
+  "eventlog_minutes": 10,
+  "diary_time": "16:30",
+  "leave_time": "17:00",
+  "leave_interval_minutes": 5,
+  "water": "羽山老弟，喝點水吧！",
+  "restroom": "坐了一陣子，起來走走、上個廁所吧。",
+  "diary": "快下班了，別忘了 **寫工作日誌**。",
+  "event_error": "剛剛 Windows 有 {0} 筆錯誤{1}，最近是 {2}／{5} 的 **Event ID {3}**（{4}）。",
+  "event_overflow": "以上",
+  "event_read_failed": "阿豚暫時讀不到 Windows 事件記錄，請檢查存取權限。",
+  "leave_messages": [
+    "已經 **17:00** 了，要不要準備下班？",
+    "又過了五分鐘，真的該收尾囉！",
+    "羽山老弟，事情明天也做得完，該下班啦！",
+    "阿豚認真提醒：時間不早了，請準備下班！",
+    "還在工作？阿豚強烈建議你現在就下班！",
+    "羽山老弟！阿豚舉雙手抗議加班，快下班！",
+    "下班！下班！阿豚今天絕不妥協！"
+  ],
+  "leave_repeat": "第 {0} 次提醒：羽山老弟，阿豚真的要你下班了！"
+}
