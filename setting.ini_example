@@ -1,0 +1,3 @@
+# Keep the endpoint in setting.ini; this example is safe to commit.
+[AI]
+endpoint =
