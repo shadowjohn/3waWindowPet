@@ -1,0 +1,5 @@
+厭世水豚工程師
+
+雙擊 Start.bat 啟動。按住 Alt 並用滑鼠左鍵拖曳水豚；在水豚上按右鍵，選 Exit 關閉。
+啟動後會顯示在其他視窗上方，不會自動加入開機啟動。
+請保留同資料夾內的 pet.ps1 與 capybara.png。需要 Windows PowerShell 與 WPF。
